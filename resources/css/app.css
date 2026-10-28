@@ -1,0 +1,26 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+
+@theme inline {
+    --font-sans:
+        Instrument Sans, ui-sans-serif, system-ui, sans-serif,
+        'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+        'Noto Color Emoji';
+}
+
+@layer components {
+    .field-input {
+        @apply min-h-10 w-full rounded-lg border border-[#e1e8df] bg-white px-3 py-2 text-xs text-[#30483c] transition outline-none placeholder:text-[#a7b1a8] focus:border-[#8ca782] focus:ring-4 focus:ring-[#7c9c6e]/10;
+    }
+
+    .field-input-error {
+        @apply border-[#d88c80] focus:border-[#c46d5f] focus:ring-[#c46d5f]/10;
+    }
+}
+
+::selection {
+    background: #dce9ce;
+    color: #18382e;
+}
